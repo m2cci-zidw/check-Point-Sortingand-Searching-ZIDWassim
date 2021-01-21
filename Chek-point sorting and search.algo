@@ -1,0 +1,25 @@
+ALGORITHM Sorting-Search
+VAR
+    T : ARRAY_OF INTEGER [];
+    i,j,aux,n: INTEGER
+BEGIN
+REPEAT
+    Write ( 'entrer  la longeur du tableau',n)
+    Read (n);
+UNTIL (n>0)
+FOR i FROM 0 TO n-1 STEP 1  DO
+    Write ( " entrer l'element i+1 du tableau" )
+    Read (T[i])
+END_FOR
+
+    FOR i FROM 1 TO n-1 STEP 1  DO
+    aux := T[i]
+    j:=i-1
+    WHILE (T[j]>aux j>=0) DO
+        T[j+1]:= T[j];
+        j:= j-1;
+    END_WHILE
+    T[j+1]:=aux ;
+    END_FOR
+    Write (T);
+END
